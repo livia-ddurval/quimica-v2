@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Composto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h2>Alterar Composto</h2>
+        <section id="cadcomposto">
+            <form method="post" action="/compostos/update/<%= composto.id %>" enctype="multipart/form-data">
+                <!-- Campos ocultos para enviar o ID do composto -->
+                <input type="hidden" name="txtid" value="<%= composto.id %>">
+                
+                <!-- Primeira linha -->
+                <div class="row">
+                    <div class="col">
+                        <label for="txtnomecomposto" class="form-label">Nome do Composto</label>
+                        <input value="<%= composto.nome %>" type="text" class="form-control" name="txtnomecomposto" id="txtnomecomposto" tabindex="1" autofocus>
+                    </div>
+                    <div class="col">
+                        <label for="txtformulamolecular" class="form-label">Fórmula Molecular</label>
+                        <input value="<%= composto.formula_molecular %>" type="text" class="form-control" name="txtformulamolecular" id="txtformulamolecular" tabindex="2">
+                    </div>
+                    <div class="col">
+                        <label for="txtestruturamolecular" class="form-label">Estrutura Molecular</label>
+                        <input value="<%= composto.estrutura_molecular %>" type="text" class="form-control" name="txtestruturamolecular" id="txtestruturamolecular" tabindex="3">
+                    </div>
+                </div>
+
+                <!-- Segunda linha -->
+                <div class="row">
+                    <div class="col">
+                        <label for="selgrupo_funcional" class="form-label">Grupo Funcional</label>
+                        <select name="selgrupo_funcional" id="selgrupo_funcional" class="form-control" tabindex="4">
+                            <!-- Verifica se gruposFuncionais está definido e não vazio -->
+                            <% if (gruposFuncionais && gruposFuncionais.length > 0) { %>
+                                <!-- Opções do grupo funcional -->
+                                <% for (let grupo of gruposFuncionais) { %>
+                                    <option value="<%= grupo.id %>" <%= composto.grupo_funcional_id == grupo.id ? 'selected' : '' %>><%= grupo.nome %></option>
+                                <% } %>
+                            <% } else { %>
+                                <!-- Caso não haja grupos funcionais disponíveis -->
+                                <option value="" disabled selected>Nenhum grupo funcional disponível</option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <!-- Terceira linha -->
+                <div class="row mt-4">
+                    <div class="col">
+                        <label for="photo1" class="form-label">Foto 1</label>
+                        <input type="file" name="photo1" id="photo1" class="form-control" tabindex="6">
+                        <% if (composto.foto1) { %>
+                            <img src="../images/upload/<%= composto.foto1 %>" alt="<%= composto.foto1 %>" style="max-width: 100px; max-height: 100px;" class="mt-2">
+                        <% } %>
+                    </div>
+                    <div class="col">
+                        <label for="photo2" class="form-label">Foto 2</label>
+                        <input type="file" name="photo2" id="photo2" class="form-control" tabindex="7">
+                        <% if (composto.foto2) { %>
+                            <img src="../images/upload/<%= composto.foto2 %>" alt="<%= composto.foto2 %>" style="max-width: 100px; max-height: 100px;" class="mt-2">
+                        <% } %>
+                    </div>
+                </div>
+
+
+                <!-- Botão de cadastrar -->
+                <div class="row mt-4">
+                    <div class="col">
+                        <input type="submit" class="btn btn-primary" value="Alterar Composto" tabindex="9">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

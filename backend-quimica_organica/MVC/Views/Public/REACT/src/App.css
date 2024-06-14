@@ -1,0 +1,409 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin-left: 20px; /* Deixe um espaço para a navbar fixa */
+  padding: 2rem;
+}
+
+
+div{
+  width: 90%;
+}
+/*nomeclatura*/
+.nomenclature-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #7fa653;
+}
+
+.nomenclature-table th, .nomenclature-table td {
+  border: 1px solid #7fa653;
+  padding: 8px;
+  text-align: left;
+}
+
+.nomenclature-table th {
+  background-color: #7fa653;
+  color: white;
+}
+
+.nomenclature-table th:first-child,
+.nomenclature-table td:first-child {
+  width: 50%;
+}
+.funcao{
+  width: 20%;
+}
+/*classificaçao carbono*/
+
+.tudo {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column  ;
+  border: 2px solid #7fa653;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  text-align: center;
+}
+
+.card-title {
+  color: #7fa653;
+  font-size: 1.2em;
+  margin: 0;
+}
+/*cadeias carbonicas*/
+.mind-map-container {
+  padding: 20px;
+ 
+}
+
+.mind-map {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.node {
+  border: 2px solid #7fa653;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+}
+
+.children > .node {
+  border-left: 2px solid #7fa653;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.node h2,
+.node h3,
+.node h4,
+.node h5 {
+  margin-top: 0;
+}
+
+.node p {
+  margin-bottom: 10px;
+}
+/*login*/
+.login-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+/* Estilos para a página de Cadeias Carbônicas */
+
+/* Estilo para o contêiner principal */
+.carbon-chains-page {
+  max-width: 800px; /* Defina a largura máxima conforme necessário */
+  margin: 0 auto; /* Centraliza o conteúdo na página */
+  padding: 20px; /* Adiciona espaço interno */
+  font-family: Arial, sans-serif; /* Escolha uma fonte */
+  color: #333; /* Cor do texto */
+}
+
+/* Estilos para os cabeçalhos */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 40px; /* Adiciona espaço acima do cabeçalho */
+  margin-bottom: 10px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 30px; /* Adiciona espaço acima do cabeçalho */
+  margin-bottom: 10px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-top: 20px; /* Adiciona espaço acima do cabeçalho */
+  margin-bottom: 5px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+h5 {
+  font-size: 1em;
+  margin-top: 15px; /* Adiciona espaço acima do cabeçalho */
+  margin-bottom: 5px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+/* Estilos para os parágrafos */
+p {
+  margin-bottom: 15px; /* Adiciona espaço abaixo do parágrafo */
+}
+
+/* Estilos para a lista não ordenada */
+ul {
+  margin-bottom: 15px; /* Adiciona espaço abaixo da lista */
+}
+
+/* Estilos para os itens da lista */
+li {
+  margin-bottom: 5px; /* Adiciona espaço abaixo do item da lista */
+}
+
+img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Garante que a imagem não tenha margens indesejadas */
+  margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona espaço vertical */
+}
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+html ::-webkit-scrollbar-track {
+  background: #7fa653;
+}
+
+
+
+
+/* h1 {
+  color: #333;
+  text-align: center;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #e7f3ff;
+  border: 1px solid #b0c9e8;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #d0e8ff;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0073e6;
+  text-align: center;
+}
+
+.selected-group {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.selected-group h2 {
+  color: #333;
+}
+
+.selected-group p {
+  color: #555;
+  font-size: 16px;
+} */
+
+
+
+
+
+.functional-groups-container h1 {
+  color: #333;
+  text-align: center;
+}
+
+.functional-groups-container p {
+  color: #666;
+  font-size: 16px;
+}
+
+.functional-groups-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.functional-group-card {
+  background-color: #e7f3ff;
+  border: 1px solid #b0c9e8;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.functional-group-card:hover {
+  background-color: #d0e8ff;
+}
+
+.functional-group-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0073e6;
+  text-align: center;
+}
+
+.functional-group-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.functional-group-details h2 {
+  color: #333;
+}
+
+.functional-group-details p {
+  color: #555;
+  font-size: 16px;
+}
+/*quiz*/
+
+.quiz-container {
+  width: 90%;
+  
+}
+
+.quiz-container h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.quiz-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.question-section {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.question-block {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%;
+
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-section label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.answer-section input {
+  margin-right: 10px;
+}
+
+button.botaoQuiz {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #7fa653;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.botaoQuiz:hover {
+  background-color: #697956;
+}
+
+.score-section {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.score-section p {
+  margin: 10px 0;
+}
